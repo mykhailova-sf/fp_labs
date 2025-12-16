@@ -1,0 +1,64 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.38.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           lab-crud-app
+version:        0.1.0.0
+description:    Computer Lab Schedule Management System
+homepage:       https://github.com/university/lab-crud-app#readme
+bug-reports:    https://github.com/university/lab-crud-app/issues
+author:         Student
+maintainer:     student@university.edu
+license:        BSD3
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/university/lab-crud-app
+
+library
+  exposed-modules:
+      Database.Connection
+      Models.FreeAccess
+      Models.Lab
+      Models.ScheduledClass
+      Models.Types
+      Models.User
+      Models.Workstation
+      Operations.CRUD
+  other-modules:
+      Paths_lab_crud_app
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.11
+    , io-streams >=1.5
+    , mysql-haskell >=1.1.3
+    , network >=3.1
+    , text >=2.0
+    , time >=1.12
+  default-language: Haskell2010
+
+executable lab-crud-app-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_lab_crud_app
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.11
+    , io-streams >=1.5
+    , lab-crud-app
+    , mysql-haskell >=1.1.3
+    , network >=3.1
+    , text >=2.0
+    , time >=1.12
+  default-language: Haskell2010

@@ -1,0 +1,27 @@
+name:                lab3-text-processing
+version:             1.0.0
+github:              "university/lab3-text-processing"
+license:             MIT
+author:              "Student"
+maintainer:          "student@example.com"
+
+extra-source-files:
+- README.md
+- textbook.txt
+
+description:         Text Processing - Find Unique Words in First Sentence
+
+dependencies:
+- base >= 4.7 && < 5
+
+ghc-options:
+- -Wall
+
+executables:
+  lab3-text-processing-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N

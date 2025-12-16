@@ -1,0 +1,31 @@
+# Stack build artifacts
+.stack-work/
+
+# Cabal artifacts
+dist/
+dist-newstyle/
+
+# macOS files
+.DS_Store
+__MACOSX/
+._*
+
+# Logs
+*.log
+
+# Binary files
+*.exe
+*.o
+*.out
+*.hi
+
+# Editors
+*~
+*.swp
+*.swo
+
+# IDE folders
+.vscode/
+.idea/
+*.iml
+

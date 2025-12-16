@@ -1,0 +1,1 @@
+Haskell is a functional programming language with a powerful type system. Programming in Haskell involves the use of pure functions. The type system in Haskell helps to avoid errors at compile time. Monads are an important concept in functional programming. Haskell is widely used in academic research.

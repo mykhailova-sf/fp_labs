@@ -1,0 +1,33 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.38.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           lab3-text-processing
+version:        1.0.0
+description:    Text Processing - Find Unique Words in First Sentence
+homepage:       https://github.com/university/lab3-text-processing#readme
+bug-reports:    https://github.com/university/lab3-text-processing/issues
+author:         Student
+maintainer:     student@example.com
+license:        MIT
+build-type:     Simple
+extra-source-files:
+    README.md
+    textbook.txt
+
+source-repository head
+  type: git
+  location: https://github.com/university/lab3-text-processing
+
+executable lab3-text-processing-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_lab3_text_processing
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010

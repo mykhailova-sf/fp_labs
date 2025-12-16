@@ -1,0 +1,58 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.38.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           lab2-dijkstra
+version:        1.0.0
+description:    Parallel Dijkstra's Algorithm Implementation
+homepage:       https://github.com/university/lab2-dijkstra#readme
+bug-reports:    https://github.com/university/lab2-dijkstra/issues
+author:         Student
+maintainer:     student@example.com
+license:        MIT
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/university/lab2-dijkstra
+
+library
+  exposed-modules:
+      Benchmark
+      Dijkstra
+      DijkstraParallel
+      Graph
+  other-modules:
+      Paths_lab2_dijkstra
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -O2
+  build-depends:
+      base >=4.14 && <5
+    , clock >=0.8
+    , containers >=0.6
+    , deepseq >=1.4
+    , parallel >=3.2
+    , random >=1.2
+  default-language: Haskell2010
+
+executable lab2-dijkstra-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_lab2_dijkstra
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -O2 -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.14 && <5
+    , clock >=0.8
+    , containers >=0.6
+    , deepseq >=1.4
+    , lab2-dijkstra
+    , parallel >=3.2
+    , random >=1.2
+  default-language: Haskell2010
